@@ -103,7 +103,29 @@ namespace QLBanHangBE.Controllers
                 return BadRequest("Dữ liệu không hợp lệ");
             }
         }
+        [HttpPut("ThanhToan/{maHoaDon}")]
+        public async Task<IActionResult> UpdateStatus(string maHoaDon)
+        {
+            try
+            {
+                var hoaDon = await _context.HoaDons.FirstOrDefaultAsync(hd => hd.Mahd == maHoaDon);
 
+                if (hoaDon == null)
+                {
+                    return NotFound("Không tìm thấy HoaDon");
+                }
+
+                hoaDon.Status = true;
+
+                await _context.SaveChangesAsync();
+
+                return Ok(hoaDon.Thanhtien);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Lỗi xử lý dữ liệu");
+            }
+        }
 
     }
 }
