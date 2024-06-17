@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "BCrypt.Net-Core/1.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BCrypt.Net-Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/BCrypt.Net-Core.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "CloudinaryDotNet/1.26.2": {
         "type": "package",
         "dependencies": {
@@ -622,10 +635,10 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "runtime.native.System.Security.Cryptography.Apple/4.3.0": {
+      "runtime.native.System.Security.Cryptography.Apple/4.3.1": {
         "type": "package",
         "dependencies": {
-          "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple": "4.3.0"
+          "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple": "4.3.1"
         },
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -673,7 +686,7 @@
           }
         }
       },
-      "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
+      "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.1": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/osx.10.10-x64/native/System.Security.Cryptography.Native.Apple.dylib": {
@@ -1298,7 +1311,7 @@
           }
         }
       },
-      "System.Security.Cryptography.Algorithms/4.3.0": {
+      "System.Security.Cryptography.Algorithms/4.3.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -1313,8 +1326,8 @@
           "System.Security.Cryptography.Encoding": "4.3.0",
           "System.Security.Cryptography.Primitives": "4.3.0",
           "System.Text.Encoding": "4.3.0",
-          "runtime.native.System.Security.Cryptography.Apple": "4.3.0",
-          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
+          "runtime.native.System.Security.Cryptography.Apple": "4.3.1",
+          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
         },
         "compile": {
           "ref/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {}
@@ -1666,6 +1679,29 @@
     }
   },
   "libraries": {
+    "BCrypt.Net-Core/1.6.0": {
+      "sha512": "hsKiHGjrnlDW05MzuzzlD9gNP8YOW2KbZ+FbvISrilsKJJ76tXKhWey6psZX5sd7DczNpSU2U6ldjPoblk8BLw==",
+      "type": "package",
+      "path": "bcrypt.net-core/1.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-core.1.6.0.nupkg.sha512",
+        "bcrypt.net-core.nuspec",
+        "lib/net40/BCrypt.Net-Core.dll",
+        "lib/net40/BCrypt.Net-Core.pdb",
+        "lib/net45/BCrypt.Net-Core.dll",
+        "lib/net45/BCrypt.Net-Core.pdb",
+        "lib/net451/BCrypt.Net-Core.dll",
+        "lib/net451/BCrypt.Net-Core.pdb",
+        "lib/net452/BCrypt.Net-Core.dll",
+        "lib/net452/BCrypt.Net-Core.pdb",
+        "lib/netstandard1.3/BCrypt.Net-Core.dll",
+        "lib/netstandard1.3/BCrypt.Net-Core.pdb",
+        "lib/netstandard2.0/BCrypt.Net-Core.dll",
+        "lib/netstandard2.0/BCrypt.Net-Core.pdb"
+      ]
+    },
     "CloudinaryDotNet/1.26.2": {
       "sha512": "JUDOUKa7T+h0nmMhBdBxCkCldN4/DIZLOlh5p30KrcBX6Spral6vxTWhzk6OH2pGd8MGL5R379EsK7tJr/IQpw==",
       "type": "package",
@@ -2782,17 +2818,17 @@
         "runtime.native.system.net.http.nuspec"
       ]
     },
-    "runtime.native.System.Security.Cryptography.Apple/4.3.0": {
-      "sha512": "DloMk88juo0OuOWr56QG7MNchmafTLYWvABy36izkrLI5VledI0rq28KGs1i9wbpeT9NPQrx/wTf8U2vazqQ3Q==",
+    "runtime.native.System.Security.Cryptography.Apple/4.3.1": {
+      "sha512": "UPrVPlqPRSVZaB4ADmbsQ77KXn9ORiWXyA1RP2W2+byCh3bhgT1bQz0jbeOoog9/2oTQ5wWZSDSMeb74MjezcA==",
       "type": "package",
-      "path": "runtime.native.system.security.cryptography.apple/4.3.0",
+      "path": "runtime.native.system.security.cryptography.apple/4.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
-        "runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512",
+        "runtime.native.system.security.cryptography.apple.4.3.1.nupkg.sha512",
         "runtime.native.system.security.cryptography.apple.nuspec"
       ]
     },
@@ -2838,16 +2874,16 @@
         "runtimes/opensuse.42.1-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
-      "sha512": "kVXCuMTrTlxq4XOOMAysuNwsXWpYeboGddNGpIgNSZmv1b6r/s/DPk0fYMB7Q5Qo4bY68o48jt4T4y5BVecbCQ==",
+    "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.1": {
+      "sha512": "t15yGf5r6vMV1rB5O6TgfXKChtCaN3niwFw44M2ImX3eZ8yzueplqMqXPCbWzoBDHJVz9fE+9LFUGCsUmS2Jgg==",
       "type": "package",
-      "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0",
+      "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512",
+        "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.1.nupkg.sha512",
         "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.nuspec",
         "runtimes/osx.10.10-x64/native/System.Security.Cryptography.Native.Apple.dylib"
       ]
@@ -4594,10 +4630,10 @@
         "version.txt"
       ]
     },
-    "System.Security.Cryptography.Algorithms/4.3.0": {
-      "sha512": "W1kd2Y8mYSCgc3ULTAZ0hOP2dSdG5YauTb1089T0/kRcN2MpSAW1izOFROrJgxSlMn3ArsgHXagigyi+ibhevg==",
+    "System.Security.Cryptography.Algorithms/4.3.1": {
+      "sha512": "DVUblnRfnarrI5olEC2B/OCsJQd0anjVaObQMndHSc43efbc88/RMOlDyg/EyY0ix5ecyZMXS8zMksb5ukebZA==",
       "type": "package",
-      "path": "system.security.cryptography.algorithms/4.3.0",
+      "path": "system.security.cryptography.algorithms/4.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4631,7 +4667,7 @@
         "runtimes/win/lib/net463/System.Security.Cryptography.Algorithms.dll",
         "runtimes/win/lib/netcore50/System.Security.Cryptography.Algorithms.dll",
         "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll",
-        "system.security.cryptography.algorithms.4.3.0.nupkg.sha512",
+        "system.security.cryptography.algorithms.4.3.1.nupkg.sha512",
         "system.security.cryptography.algorithms.nuspec"
       ]
     },
@@ -5353,11 +5389,13 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "BCrypt.Net-Core >= 1.6.0",
       "CloudinaryDotNet >= 1.26.2",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.30",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.30",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.30",
-      "Swashbuckle.AspNetCore >= 6.5.0"
+      "Swashbuckle.AspNetCore >= 6.5.0",
+      "System.Security.Cryptography.Algorithms >= 4.3.1"
     ]
   },
   "packageFolders": {
@@ -5399,6 +5437,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "BCrypt.Net-Core": {
+            "target": "Package",
+            "version": "[1.6.0, )"
+          },
           "CloudinaryDotNet": {
             "target": "Package",
             "version": "[1.26.2, )"
@@ -5422,6 +5464,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.5.0, )"
+          },
+          "System.Security.Cryptography.Algorithms": {
+            "target": "Package",
+            "version": "[4.3.1, )"
           }
         },
         "imports": [

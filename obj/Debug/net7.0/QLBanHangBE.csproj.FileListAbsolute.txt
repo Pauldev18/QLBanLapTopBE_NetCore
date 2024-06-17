@@ -65,3 +65,4 @@
 /Users/quanganh/Downloads/QLBanHangBE/QLBanHangBE/obj/Debug/net7.0/QLBanHangBE.csproj.CopyComplete
 /Users/quanganh/Downloads/QLBanHangBE/QLBanHangBE/bin/Debug/net7.0/CloudinaryDotNet.dll
 /Users/quanganh/Downloads/QLBanHangBE/QLBanHangBE/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/quanganh/Downloads/QLBanHangBE/QLBanHangBE/bin/Debug/net7.0/BCrypt.Net-Core.dll
