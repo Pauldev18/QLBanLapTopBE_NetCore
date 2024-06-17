@@ -103,8 +103,8 @@ namespace QLBanHangBE.Controllers
                 return BadRequest("Dữ liệu không hợp lệ");
             }
         }
-        [HttpPut("ThanhToan/{maHoaDon}")]
-        public async Task<IActionResult> UpdateStatus(string maHoaDon)
+        [HttpPut("ThanhToan/{maHoaDon}/{soTien}")]
+        public async Task<IActionResult> UpdateStatus(string maHoaDon, int soTien)
         {
             try
             {
@@ -114,12 +114,18 @@ namespace QLBanHangBE.Controllers
                 {
                     return NotFound("Không tìm thấy HoaDon");
                 }
-
-                hoaDon.Status = true;
+                if(soTien >= hoaDon.Thanhtien)
+                {
+                    hoaDon.Status = true;
+                }
+                else
+                {
+                    return BadRequest("Số tiền không đủ");
+                }
 
                 await _context.SaveChangesAsync();
 
-                return Ok(hoaDon.Thanhtien);
+                return Ok(hoaDon.Thanhtien - soTien);
             }
             catch (Exception ex)
             {
